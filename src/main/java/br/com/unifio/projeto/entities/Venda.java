@@ -6,7 +6,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class Venda {
@@ -20,10 +20,10 @@ public class Venda {
 
   public Integer quantidadeTotal;
 
-  @ManyToOne
+  @OneToOne
   public Cliente cliente;
 
-  @ManyToOne
+  @OneToOne
   public Funcionario funcionario;
 
 }
