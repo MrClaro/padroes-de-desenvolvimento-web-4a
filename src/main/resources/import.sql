@@ -1,6 +1,76 @@
--- This file allow to write SQL commands that will be emitted in test and dev.
--- The commands are commented as their support depends of the database
--- insert into myentity (id, field) values(1, 'field-1');
--- insert into myentity (id, field) values(2, 'field-2');
--- insert into myentity (id, field) values(3, 'field-3');
--- alter sequence myentity_seq restart with 4;
+INSERT INTO Categoria (nome) VALUES ("Bebidas");
+INSERT INTO Categoria (nome) VALUES ("Frutas");
+INSERT INTO Categoria (nome) VALUES ("Carnes");
+INSERT INTO Categoria (nome) VALUES ("Laticínios");
+INSERT INTO Categoria (nome) VALUES ("Vegetais");
+INSERT INTO Categoria (nome) VALUES ("Grãos");
+INSERT INTO Categoria (nome) VALUES ("Doces");
+INSERT INTO Categoria (nome) VALUES ("Snacks");
+INSERT INTO Categoria (nome) VALUES ("Produtos de Panificação");
+INSERT INTO Categoria (nome) VALUES ("Produtos de Limpeza");
+
+INSERT INTO Fabricante (nome) VALUES ("Coca-Cola Company");
+INSERT INTO Fabricante (nome) VALUES ("Nestlé");
+INSERT INTO Fabricante (nome) VALUES ("JBS");
+INSERT INTO Fabricante (nome) VALUES ("Danone");
+INSERT INTO Fabricante (nome) VALUES ("Sadia");
+INSERT INTO Fabricante (nome) VALUES ("Camil");
+INSERT INTO Fabricante (nome) VALUES ("Bauducco");
+INSERT INTO Fabricante (nome) VALUES ("Elma Chips");
+INSERT INTO Fabricante (nome) VALUES ("Wickbold");
+INSERT INTO Fabricante (nome) VALUES ("Bombril");
+
+INSERT INTO Cliente (nome, cpf) VALUES ("João Silva", "123.456.789-01");
+INSERT INTO Cliente (nome, cpf) VALUES ("Maria Santos", "234.567.890-12");
+INSERT INTO Cliente (nome, cpf) VALUES ("Pedro Oliveira", "345.678.901-23");
+INSERT INTO Cliente (nome, cpf) VALUES ("Ana Costa", "456.789.012-34");
+INSERT INTO Cliente (nome, cpf) VALUES ("Carlos Ferreira", "567.890.123-45");
+INSERT INTO Cliente (nome, cpf) VALUES ("Lucia Almeida", "678.901.234-56");
+INSERT INTO Cliente (nome, cpf) VALUES ("Roberto Lima", "789.012.345-67");
+INSERT INTO Cliente (nome, cpf) VALUES ("Fernanda Rocha", "890.123.456-78");
+INSERT INTO Cliente (nome, cpf) VALUES ("Marcos Pereira", "901.234.567-89");
+INSERT INTO Cliente (nome, cpf) VALUES ("Juliana Cardoso", "012.345.678-90");
+
+INSERT INTO Funcionario (nome, cpf) VALUES ("Antonio Souza", "111.222.333-44");
+INSERT INTO Funcionario (nome, cpf) VALUES ("Beatriz Mendes", "222.333.444-55");
+INSERT INTO Funcionario (nome, cpf) VALUES ("Eduardo Gomes", "333.444.555-66");
+INSERT INTO Funcionario (nome, cpf) VALUES ("Carla Ribeiro", "444.555.666-77");
+INSERT INTO Funcionario (nome, cpf) VALUES ("Diego Martins", "555.666.777-88");
+INSERT INTO Funcionario (nome, cpf) VALUES ("Elaine Barbosa", "666.777.888-99");
+INSERT INTO Funcionario (nome, cpf) VALUES ("Felipe Araujo", "777.888.999-00");
+INSERT INTO Funcionario (nome, cpf) VALUES ("Gabriela Castro", "888.999.000-11");
+INSERT INTO Funcionario (nome, cpf) VALUES ("Henrique Dias", "999.000.111-22");
+INSERT INTO Funcionario (nome, cpf) VALUES ("Isabel Moreira", "000.111.222-33");
+
+INSERT INTO Produto (nome, preco, quantidade, validade, categoria_codigo, fabricante_codigo) VALUES ("Coca-Cola 350ml", 5.00, 100, '2024-12-31', 1, 1);
+INSERT INTO Produto (nome, preco, quantidade, validade, categoria_codigo, fabricante_codigo) VALUES ("Maçã Fuji", 8.50, 50, '2024-10-15', 2, 2);
+INSERT INTO Produto (nome, preco, quantidade, validade, categoria_codigo, fabricante_codigo) VALUES ("Frango Congelado", 12.00, 30, '2024-11-30', 3, 3);
+INSERT INTO Produto (nome, preco, quantidade, validade, categoria_codigo, fabricante_codigo) VALUES ("Iogurte Natural", 4.50, 75, '2024-10-20', 4, 4);
+INSERT INTO Produto (nome, preco, quantidade, validade, categoria_codigo, fabricante_codigo) VALUES ("Presunto Fatiado", 15.00, 25, '2024-10-25', 3, 5);
+INSERT INTO Produto (nome, preco, quantidade, validade, categoria_codigo, fabricante_codigo) VALUES ("Arroz Branco 5kg", 20.00, 40, '2025-06-30', 6, 6);
+INSERT INTO Produto (nome, preco, quantidade, validade, categoria_codigo, fabricante_codigo) VALUES ("Biscoito Recheado", 3.50, 120, '2025-03-15', 7, 7);
+INSERT INTO Produto (nome, preco, quantidade, validade, categoria_codigo, fabricante_codigo) VALUES ("Chips de Batata", 6.00, 80, '2025-01-20', 8, 8);
+INSERT INTO Produto (nome, preco, quantidade, validade, categoria_codigo, fabricante_codigo) VALUES ("Pão de Forma", 4.00, 60, '2024-10-08', 9, 9);
+INSERT INTO Produto (nome, preco, quantidade, validade, categoria_codigo, fabricante_codigo) VALUES ("Detergente", 2.50, 100, '2026-12-31', 10, 10);
+
+INSERT INTO Venda (horario, valorTotal, quantidadeTotal, cliente_codigo, funcionario_codigo) VALUES ('2024-09-01', 25.00, 5, 1, 1);
+INSERT INTO Venda (horario, valorTotal, quantidadeTotal, cliente_codigo, funcionario_codigo) VALUES ('2024-09-01', 45.50, 8, 2, 2);
+INSERT INTO Venda (horario, valorTotal, quantidadeTotal, cliente_codigo, funcionario_codigo) VALUES ('2024-09-02', 67.00, 12, 3, 3);
+INSERT INTO Venda (horario, valorTotal, quantidadeTotal, cliente_codigo, funcionario_codigo) VALUES ('2024-09-02', 33.75, 7, 4, 4);
+INSERT INTO Venda (horario, valorTotal, quantidadeTotal, cliente_codigo, funcionario_codigo) VALUES ('2024-09-03', 89.25, 15, 5, 5);
+INSERT INTO Venda (horario, valorTotal, quantidadeTotal, cliente_codigo, funcionario_codigo) VALUES ('2024-09-03', 12.50, 3, 6, 6);
+INSERT INTO Venda (horario, valorTotal, quantidadeTotal, cliente_codigo, funcionario_codigo) VALUES ('2024-09-04', 156.00, 20, 7, 7);
+INSERT INTO Venda (horario, valorTotal, quantidadeTotal, cliente_codigo, funcionario_codigo) VALUES ('2024-09-04', 78.90, 14, 8, 8);
+INSERT INTO Venda (horario, valorTotal, quantidadeTotal, cliente_codigo, funcionario_codigo) VALUES ('2024-09-05', 234.75, 25, 9, 9);
+INSERT INTO Venda (horario, valorTotal, quantidadeTotal, cliente_codigo, funcionario_codigo) VALUES ('2024-09-05', 45.00, 6, 10, 10);
+
+INSERT INTO ItemVenda (valorParcial, quantidadeParcial, produto_codigo) VALUES (25.00, 5, 1);
+INSERT INTO ItemVenda (valorParcial, quantidadeParcial, produto_codigo) VALUES (17.00, 2, 2);
+INSERT INTO ItemVenda (valorParcial, quantidadeParcial, produto_codigo) VALUES (36.00, 3, 3);
+INSERT INTO ItemVenda (valorParcial, quantidadeParcial, produto_codigo) VALUES (18.00, 4, 4);
+INSERT INTO ItemVenda (valorParcial, quantidadeParcial, produto_codigo) VALUES (30.00, 2, 5);
+INSERT INTO ItemVenda (valorParcial, quantidadeParcial, produto_codigo) VALUES (40.00, 2, 6);
+INSERT INTO ItemVenda (valorParcial, quantidadeParcial, produto_codigo) VALUES (21.00, 6, 7);
+INSERT INTO ItemVenda (valorParcial, quantidadeParcial, produto_codigo) VALUES (24.00, 4, 8);
+INSERT INTO ItemVenda (valorParcial, quantidadeParcial, produto_codigo) VALUES (20.00, 5, 9);
+INSERT INTO ItemVenda (valorParcial, quantidadeParcial, produto_codigo) VALUES (12.50, 5, 10);
